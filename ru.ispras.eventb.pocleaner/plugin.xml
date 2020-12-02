@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            categoryId="org.eventb.ui.category.prove"
+            description="Clean Proof Obligation(s)"
+            id="ru.ispras.eventb.poclean"
+            name="Clean Proof Obligation(s)">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="true"
+            locationURI="popup:fr.systerel.explorer.navigator.view">
+         <command
+               commandId="ru.ispras.eventb.poclean"
+               mnemonic="C"
+               style="push"
+               tooltip="Clean the selected proof obligations">
+            <visibleWhen
+                  checkEnabled="false">
+               <or>
+                  <reference
+                        definitionId="org.eventb.ui.definition.containsEventBRootOrRodinProject">
+                  </reference>
+                  <iterate
+                        operator="or">
+                     <instanceof
+                           value="org.eventb.core.IPSStatus">
+                     </instanceof>
+                  </iterate>
+               </or>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="ru.ispras.eventb.pocleaner.handlers.POCleanHandler"
+            commandId="ru.ispras.eventb.poclean">
+      </handler>
+   </extension>
+
+</plugin>

@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Proof Obligation Cleaner
+Bundle-SymbolicName: ru.ispras.eventb.pocleaner;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: ru.ispras.eventb.pocleaner.Activator
+Bundle-Vendor: ISP RAS
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eventb.core,
+ org.rodinp.core,
+ org.eclipse.core.resources,
+ org.eventb.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Automatic-Module-Name: ru.ispras.eventb.pocleaner
+Bundle-ActivationPolicy: lazy

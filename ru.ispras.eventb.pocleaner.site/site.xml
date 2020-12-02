@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/ru.ispras.eventb.pocleaner.feature_1.0.0.202012011731.jar" id="ru.ispras.eventb.pocleaner.feature" version="1.0.0.202012011731">
+      <category name="Proof Obligation Cleaner"/>
+   </feature>
+   <category-def name="Proof Obligation Cleaner" label="Proof Obligation Cleaner"/>
+</site>
